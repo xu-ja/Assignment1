@@ -5,7 +5,11 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
-  }
+  },
+  {
+    path: 'ontario-covid-data',
+    loadChildren: () => import('./pages/ontario-covid-data/ontario-covid-data.module').then( m => m.OntarioCovidDataPageModule)
+  },
 ];
 @NgModule({
   imports: [

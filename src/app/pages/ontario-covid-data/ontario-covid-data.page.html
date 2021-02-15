@@ -1,0 +1,21 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button text="Back"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Covid-19 Vaccine Data</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <app-cases-in-ontario></app-cases-in-ontario>
+  <p>
+    Report date: {{vaccineData.report_date}}<br>
+    Previous day doses administered: {{vaccineData.previous_day_doses_adimistered}}<br>
+    Total doses administered: {{vaccineData.total_doses_administered}}<br>
+    Total doses in fully vaccinated individuals: {{vaccineData.total_doses_in_fully_vaccinated_individuals}}<br>
+    Total individuals fully vaccinated: {{vaccineData.total_individuals_fully_vaccinated}}
+  </p>
+  <ion-input style="display:block; background-color:darkgray; color:black;" [(ngModel)]='message' placeholder="Enter a message"></ion-input>
+  <button (click)='newMessage()'>Send Message</button>
+</ion-content>

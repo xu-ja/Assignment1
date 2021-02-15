@@ -1,17 +1,16 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 2
+      Ontario
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 2</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 2 page"></app-explore-container>
+  <app-cases-in-ontario></app-cases-in-ontario>
+  <p style="display:block; background-color:darkgray; color:black;">{{message}}</p>
+  <ion-list-header style="display:block; text-align:center;">Summary of Total Doses Administered</ion-list-header>
+  <ion-list *ngFor="let item of dates">
+    <ion-button (click)="sendData(item)" expand="block">{{item.report_date}}</ion-button>
+  </ion-list>
 </ion-content>
